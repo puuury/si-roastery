@@ -1,0 +1,279 @@
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime:wght@700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400..700&family=Vazirmatn:wght@100..900&display=swap');
+html,
+body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    font-family: "Courier Prime", monospace;
+}
+.background {
+    position: absolute;
+    height: 100%;
+    width:100%;
+    overflow: hidden;
+}
+.background .wrapp {
+    position: absolute;
+    top: 28%;
+    left: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+    height: 8rem;
+    padding: 0;
+    background: #df8105;
+    border-top: 2px  solid #000000;
+    border-bottom: 2px  solid #000000;
+    z-index: 6;
+    overflow: hidden;
+    rotate: 36deg;
+}
+.background .wrappTwo {
+    position: absolute;
+    top: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    width: 200%;
+    height: 4.3rem;
+    padding: 0;
+    background: #000000;
+    border-top: 2px  solid #df8105;
+    border-bottom: 2px  solid #df8105;
+    z-index: 5;
+    overflow: hidden;
+}
+.wrappTwo .h1wrappTwo {
+    width: 100%;
+    height: 65%;
+    /* overflow: hidden; */
+    position: absolute;
+}
+.wrapp .h1wrapp {
+    width: 100%;
+    height: 50%;
+    position: absolute;
+}
+.wrapp .h1wrapp h1{
+    display: flex;
+    gap: 16px;
+    width: 100%;
+    letter-spacing: 0;
+    font-size: 3rem;
+    padding: 0;
+    margin: 0;
+    animation: slide 18s linear infinite;
+}
+.wrappTwo .h1wrappTwo h1{
+    font-family: "Vazirmatn", sans-serif;
+    color: #df8105;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 200%;
+    letter-spacing: 0;
+    font-size: 2rem;
+    padding: 0;
+    margin: 0;
+    animation: slide2 88s linear infinite;
+}
+.h1wrapp:hover h1 {
+    animation-play-state: paused;
+}
+.wrapp .h1wrapp:hover {
+    animation-play-state: paused;
+
+}
+.h1wrappTwo:hover h1 {
+    animation-play-state: paused;
+
+}
+.wrapp .h1wrapp h1 span {
+    color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #000000dc;
+}
+@keyframes slide {
+        to {
+            transform: translateX(-200%);
+        }
+}
+@keyframes slide2 {
+    0% {
+        transform: translateX(-60%);
+    }
+    50% {
+        transform: translateX(100vw);
+    }
+    100% {
+        transform: translateX(-60%);
+    }
+}
+.background img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-filter: blur(15px);
+    filter: blur(15px);
+    background-position: center;
+    object-fit: cover;
+    z-index: 4;
+}
+.card {
+    position: absolute;
+    border-radius: 18px;
+    height: 450px;
+    width: 400px;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    background-size: cover;
+    background-image: url(01.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 80px -10px black;
+    overflow: hidden;
+    z-index: 7;
+}
+.card img {
+    position: absolute;
+    left: -1%;
+    top: -46%;
+    width: 100%;
+    object-fit: cover;
+    opacity: 1;
+    z-index: 5;
+    scale: 1.04;
+    filter: drop-shadow(-5px 20px 20px rgb(248, 150, 3));
+}
+.card-blur {
+    position: absolute;
+    height: 100%;
+    width: calc(100% + 1px);
+    background-color: black;
+    opacity: 0;
+    transition: opacity 0.15s ease-in;
+}
+.card:hover .card-blur {
+    opacity: 0.8;
+}
+.footer {
+    z-index: 5;
+    position: absolute;
+    height: 80px;
+    width: 100%;
+    bottom: 0;
+}
+svg#curve {
+    position: absolute;
+    fill: rgb(221, 108, 32);
+    left: 0;
+    bottom: 0;
+    width: 400px;
+    height: 450px;
+}
+.connections {
+    height: 80px;
+    width: 400px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 100px;
+    margin: auto;
+}
+.connection {
+    height: 25px;
+    width: 25px;
+    border-radius: 100%;
+    background-color: rgb(255, 255, 255);
+    display: inline-block;
+    padding: 5px;
+    margin-right: 25px;
+    transform: translateY(200px);
+    transition: transform 1s cubic-bezier(.46, 1.48, .18, .81);
+}
+.card:hover .connection {
+    transform: translateY(0px);
+}
+.info {
+	display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+    transform: translateY(250px);
+    transition: transform 1s cubic-bezier(.31,1.21,.64,1.02);
+}
+.info .fa {
+    font-family: "Vazirmatn", sans-serif;
+    text-align: right;
+}
+.icon .en {
+    text-align: left;
+}
+.card:hover .info {
+    transform: translateY(0px);
+}
+.name {
+    font-weight: bolder;
+    padding-top: 5px;
+}
+.job {
+    margin-top: 10px;
+}
+.namefa {
+    font-weight: bolder;
+    padding-top: 4px;
+}
+.jobfa {
+    margin-top: 9px;
+}
+.connection.facebook {
+    transition-delay: 0s;
+    margin-left: 20px;
+}
+.connection.twitter {
+    transition-delay: 0.06s;
+}
+
+.connection.behance {
+    transition-delay: 0.12s;
+}
+
+.connection.facebook .icon {
+    height: 24px;
+    width: 24px;
+    
+    background-position: center;
+    background-size: cover;
+}
+.connection.twitter .icon {
+    height: 24px;
+    width: 24px;
+   
+    background-position: center;
+    background-size: cover;
+}
+.connection.behance .icon {
+    height: 24px;
+    width: 24px;
+    margin-left: 2px;
+    background-position: center;
+    background-size: cover;
+}
+.connection.facebook .icon {
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAC90lEQVRIS7VVT0gUYRR/b+ebrNSMQCpL29lIwUNGRihCdAn64yEi6hTULQ8WdBCjbL7NBE2IoAg9RBKBReGtoA5WJ4OMEiRMaWctK8FAS0nxm5nXW2PVdWdmRWhOw7z3fr/f+zsI//nB/4wPyyYYbYXs6T9aNVDoKIvaSUBbEXEdEU0B4iMkdduQ8GGp4IwEX2/AGmdSXHAJ6hKAgRkTNRvSvrjYJ5DAknoFID0BwC2ewEQuIbxEgrec0XvQnD7jMgwiAiX9fQliUe0UA99FQN0bHO6jrurDl+BHwh5rgo2gRAkAFQtw3hRJ6E989ySwotpJgNBDv3Kw2isR026MN8FmsrUGAjzOQvKT/kTwICIVC/QgGL4qqhwXXnG9hY/yDkOqM5bUuNnYyQ1evdSP6zMUMVVxGsFYC+ROTYtBDtrkU/OJbLALp0OiLEhEYrIi0s5NI7CkaGHwOr/SILi3wqZzjv162K/Cf6Jo3DDtDSkEn5shD2fECJcmJ4DgmK45vbOO/iXDgvYZptqVQmBF9Rr+cCcokJep3AWRwyJeB++D22ZIJ4G3MEWxqHjBk3AgKHCVpoqUo+0hCHUFZ0AHuUTPUzOQYpzrut53NLlxBth5cdRr2eemLwFBPAxqB0qw5wlIguBAFazKbTdM56wVFc848UP+O+KeiJjO46R9btGoHfT4qD4bsFhjSHax0CDfdsQAZxry8uUFfMoLWL3YNr/JrGzE6+Zw0BgQVhul6p31UXRzg/f5LGAMQJXzRZ3wJpD6PW756QUjfeON7KAsuzUyA5MW6h2sZm790x4iBrUrGXxgqW0+g2EJpYRaJRJ+csHuTyqJNUIJOqKNy7LfuywwpIfUkcIGGPKypxy77xLWKtAOuxAq4DMd5gz28uhWBTS/081SNdvr4ZefT9o1jUX1WiS67nXE/oHwpQHoFoT1RVL1Bk+ez7mOXYNtXJbzHLybfx1lfI5/80+kh9+7s0B1FUj4mQk4ZUyX67wSv4z/5JWALo75C9GXHCjY4RcJAAAAAElFTkSuQmCC");
+}
+.connection.twitter .icon {
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAACm0lEQVRIS8WVO2gUYRDHZ+6+xYgPSKFGQbw9PNAihQQL36WNiPGBoFY2ggQUIiZEzT5Qrzg1lYKVNhEJJBZaCFbiAwvBQlHxcbeHKQw24qVIuO92/F9yd+7ubfQMhGz5fTPz2/9/ZnaZFvjhBa5PiwMo2LRJ2HBBP9KSQpExldT96y/R52h8k4KCY5whkutEnGypeC1IRDQz95hW+XYwLwTI22o3gp7+T+FwrAgJbzft8qv6eQhQcNQY3ry7VQCqTaxo05nJqeRBosTdah7ORtOWPhwLyDuGB+KGKADyxxPEWSS/nynC3MkiA0I0nrb11qJrdPlCr2t5X2HTxniArUqwaHkQgKJP8JaHVvVRKXhezFK7P60eQXEbkOuIuaOmoAQFK5sAcI891/AjxX/IEp1J99Evz1UW9J+aVUC3zEF9+ZtDayusvgCytJ5XbTZUGc0Am5THRjk8AZJLWfo8mp+DsnMhuMhVFLpQsI1hbNOxP3dSMS2tmgEjlPQ+GDrsv3/StCp38o76zsRrIuomYEWH56heiL/WuBPxTVs3RrwxRXEW4bInZZVv/g0ABWehYCgIR5MbdSNjamAwAmKJhtNW+QQsugKLBuItUg/Q4AP/7EE1AFscAhDkCuktpkVvC666yEKna4WG0Jtc0VHbMLIvQraKTMGiRtOjizaJiVgWUVFMcLk7NUhvgucA7hGfRqBsdQTwE4D2+D1wjE8gZsKNrs4llDCPcn3RhLpQeF9T3OwifMSnYnMsABbdx8XR2MRWD4XuAXA8FlB01Q686vNWazXHiaBPO1O2fhkLmGm0rfoxFdn5QPB96kXxG8Hc2D9a3k7uR9Be4sQuBHTODcOHgfgdif8Mi/gQzX0cjV2cX+Z87JkrZ8EV/AajNhsoQZr06QAAAABJRU5ErkJggg==");
+}
+.connection.behance .icon {
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAA5UlEQVRIS2NkoDFgpLH5DFgtuN/I+h9ksWL9b7A8IT4+Rw5TC6gZL/SN5HuNrJeANuqS6IPzwMRghEsPig9gqYVEC+CpDZs+qliAZPB1xv//ShQa/m6DiVHbAgaG/wz3FBt+K1PVAlwZEmQJVXwwagHBVEvzIEJxwX+GB8BUpEjVVAQz7P9/hktMDP8qceaDe40sLxgZGMUJhgmqk58r1v+RIq6oaGBpZ2BkrCDFAkaG/80K9X/qiLIA6EXGh00sVf8YGPKBPhHFb9H/p8Bqb6JS/Z9ukms0UnxASC196wNCriFHHgDV8YkZ4a26yAAAAABJRU5ErkJggg==");
+
+}

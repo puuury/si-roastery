@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siroastery</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <div class="background">
+        <div class="wrapp">
+            <div class="h1wrapp">
+                <h1>
+                    Siroastery <span>Siroastery</span> Siroastery <span>Siroastery</span> Siroastery
+                    <span>Siroastery</span> Siroastery <span>Siroastery</span> Siroastery <span>Siroastery</span> Siroastery
+                    <span>Siroastery</span> Siroastery <span>Siroastery</span> Siroastery
+                </h1> 
+            </div>
+        </div>
+        <div class="wrappTwo">
+            <div class="h1wrappTwo">
+                <h1>
+                    رستری‌قهوه‌سی رستری‌قهوه‌سی رستری‌قهوه‌سی رستری‌قهوه‌سی رستری‌قهوه‌سی رستری‌قهوه‌سی رستری‌قهوه‌سی 
+                    رستری‌قهوه‌سی رستری‌قهوه‌سی رستری‌قهوه‌سی رستری‌قهوه‌سی رستری‌قهوه‌سی رستری‌قهوه‌سی رستری‌قهوه‌سی 
+                    رستری‌قهوه‌سی رستری‌قهوه‌سی رستری‌قهوه‌سی رستری‌قهوه‌سی رستری‌قهوه‌سی رستری‌قهوه‌سی رستری‌قهوه‌سی 
+                    رستری‌قهوه‌سی رستری‌قهوه‌سی رستری‌قهوه‌سی رستری‌قهوه‌سی رستری‌قهوه‌سی رستری‌قهوه‌سی رستری‌قهوه‌سی 
+                </h1>
+            </div>
+        </div>
+        <img src="01.jpeg">
+    </div>
+    </div>
+    <div id="curve" class="card">
+        <img src="01-removebg.png" alt="">
+    <div class="footer">
+        <div class="connections">
+            <div class="connection facebook"><div class="icon"></div></div>
+            <div class="connection twitter"><div class="icon"></div></div>
+            <div class="connection behance"><div class="icon"></div></div>
+        </div>
+        <svg id="curve">
+            <path id="p" d="M0,200 Q80,100 400,200 V150 H0 V50" transform="translate(0 300)" />
+            <rect id="dummyRect" x="0" y="0" height="450" width="400"
+		  fill="transparent" />
+            <!-- slide up-->
+            <animate xlink:href="#p" attributeName="d" to="M0,50 Q80,100 400,50 V150 H0 V50" fill="freeze" begin="dummyRect.mouseover" end="dummyRect.mouseout" dur="0.1s" id="bounce1" />
+            <!-- slide up and curve in -->
+            <animate xlink:href="#p" attributeName="d" to="M0,50 Q80,0 400,50 V150 H0 V50" fill="freeze" begin="bounce1.end" end="dummyRect.mouseout" dur="0.15s" id="bounce2" />
+            <!-- slide down and curve in -->
+            <animate xlink:href="#p" attributeName="d" to="M0,50 Q80,80 400,50 V150 H0 V50" fill="freeze" begin="bounce2.end" end="dummyRect.mouseout" dur="0.15s" id="bounce3" />
+            <!-- slide down and curve out -->
+            <animate xlink:href="#p" attributeName="d" to="M0,50 Q80,45 400,50 V150 H0 V50" fill="freeze" begin="bounce3.end" end="dummyRect.mouseout" dur="0.1s" id="bounce4" />
+            <!-- curve in -->
+            <animate xlink:href="#p" attributeName="d" to="M0,50 Q80,50 400,50 V150 H0 V50" fill="freeze" begin="bounce4.end" end="dummyRect.mouseout" dur="0.05s" id="bounce5" />
+
+            <animate xlink:href="#p" attributeName="d" to="M0,200 Q80,100 400,200 V150 H0 V50" fill="freeze" begin="dummyRect.mouseout" dur="0.15s" id="bounceOut" />
+        </svg>
+        <div class="info">
+            <div class="en">
+                <div class="name">Abolfaz Nouri</div>
+                <div class="job">Barista</div>
+            </div>
+            <div class="fa">
+                <div class="namefa">ابوالفضل نوری</div>
+                <div class="jobfa">باریستا</div>
+            </div>
+        </div>
+    </div>
+    <div class="card-blur"></div>
+</div>
+</body>
+</html>
